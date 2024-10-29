@@ -26,7 +26,7 @@ class Home:
     
     def navBar(self):
         return  Container(height=50, bgcolor='orange',
-                            content=
+                            content =
                                     Row(
                                         controls = [
                                                     Container(width=20),
@@ -137,9 +137,9 @@ class Home:
         self.page.add(self.container)
     
      
-# Ma fonction principale qui crée une instance pour Home et fait appel à run pour afficher le contenu de la page      
+# Ma fonction principale qui crée une instance pour
+# Home et fait appel à run pour afficher le contenu de la page      
 def main(page: Page):
-    # page.title('Home Page')
     app = Home(page)
     app.run()
 
