@@ -61,7 +61,7 @@ class Login:
                                     Container(height=180),
                     
                                     
-                                    FilledButton(text="Envoyer",
+                                    FilledButton(text="Conitnuer",
                                                  adaptive=True, 
                                                  width=150, 
                                                  style=ButtonStyle(
