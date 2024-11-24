@@ -3,10 +3,13 @@ import asyncio
 from login import Login
 
 
+
+
+
 class Loading:
     def __init__(self, page: Page):
         self.page = page
-        self.page.adaptive = True
+        self.page.adaptive=True
         self.container = self.allLoads()
     
     def allLoads(self):
@@ -33,7 +36,7 @@ class Loading:
         self.page.update()
         Login(self.page).run()
     
-   
+    
    
     def run(self):
         asyncio.run(self.start_loading())

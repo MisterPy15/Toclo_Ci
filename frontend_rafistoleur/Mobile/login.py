@@ -6,13 +6,13 @@ class Login:
     
     def __init__(self, page: Page):
         self.page = page
-        self.page.adaptive = True
+        self.page.adaptive=True
         self.container = self.AllLoginR()
        
         
     
     def AllLoginR(self):
-        return Column(
+        return Column(scroll="auto",
                     controls=[
                             self.Form(),
             ],alignment="center",
@@ -24,6 +24,7 @@ class Login:
     def Form(self):
         return Container(
             content = Column(
+                # scroll="auto",
                             alignment='center',
                             horizontal_alignment="center",
                             controls=[

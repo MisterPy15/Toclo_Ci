@@ -1,15 +1,16 @@
 from flet import *
 
 
+
 class AcceuilService:
-    
+
     def __init__(self, page: Page):
         self.page=page
         self.page.adaptive = True
         self.container = self.AllHome()
         
         
-        
+      
         
     def AllHome(self):
         return Column(
@@ -31,6 +32,7 @@ class AcceuilService:
 def main(page: Page):
     app = AcceuilService(page)
     app.run()
+ 
     
 app(target=main)
     

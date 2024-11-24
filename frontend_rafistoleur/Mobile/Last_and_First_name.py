@@ -3,14 +3,13 @@ import time
 
 
 
-class Confirmation:
+class InfoUser:
     
     def __init__(self, page: Page):
         self.page = page
         self.container = self.AllLoginR()
        
-      
-   
+        
     
     def AllLoginR(self):
         return Column(
@@ -18,7 +17,7 @@ class Confirmation:
                             self.Form(),
             ],
             
-        ) 
+        )
         
         
         
@@ -36,7 +35,7 @@ class Confirmation:
                                                 
                                                 Container(height=20),
                                                 
-                                                Text(" SAISISSEZ LE CODE A 6 CHIFFRES", 
+                                                Text(" SAISISSEZ VOTRE NOM", 
                                                     size=20, 
                                                     color="orange",
                                                     weight='bold',
@@ -45,13 +44,15 @@ class Confirmation:
                                                 Container(height=30),
                                                 
                                                 
-                                                Text("Nous avons envoyer un code au +225 {} \n                            par SMS", 
-                                                    size=16),
+                                                Text("""Veuillez utiliser votre véritable nom afin que  
+                                                        les rafistoleurs puissent vous plus facilement 
+                                                        augmentant ainsi la sécurité de vos commandes.""", 
+                                                    size=14),
                                                 
                                                 Container(height=10),
                                                 
                                                 
-                                                TextField(label="Code ",
+                                                TextField(label="Prénom",
                                                         
                                                         border_radius=15,
                                                         border_width=3,
@@ -59,15 +60,17 @@ class Confirmation:
                                                         keyboard_type="number"),
                                                 
                                                 
-                                                Container(height=180),
-                                    
-                        Text("Vous n'avez pas reçu ?",
-                                spans=[
-                                        TextSpan(text="00:00",
-                                               
-                                    )
-                                ]
-                            ),
+                                                
+                                                TextField(label="Nom",
+                                                        
+                                                        border_radius=15,
+                                                        border_width=3,
+                                                        border_color="black",
+                                                        keyboard_type="number"),
+                                                
+                                                
+                                                Container(height=150),
+                        
                         Container(height=10),
                                                 
                         Row(
@@ -79,7 +82,6 @@ class Confirmation:
                                                 adaptive=True, 
                                                 width=190,
                                                 icon=icons.SEND, 
-                                                
                                                 on_click=lambda e: print("Renvoyer"),
                                                 style=ButtonStyle(
                                                                     color='white', 
@@ -112,7 +114,7 @@ class Confirmation:
       
 
 def main(page : Page):
-    app = Confirmation(page)
+    app = InfoUser(page)
     app.run()
     
 app(target=main)
