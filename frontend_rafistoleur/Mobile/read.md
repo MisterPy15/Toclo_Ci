@@ -15,3 +15,7 @@ flet run file_name.py --android
 ```
 flet run file_name.py --Ios
 ```
+
+
+def go_back(self, e):
+    self.page.go('/page_précedente')

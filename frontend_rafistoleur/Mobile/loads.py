@@ -2,10 +2,6 @@ from flet import *
 import asyncio
 from login import Login
 
-
-
-
-
 class Loading:
     def __init__(self, page: Page):
         self.page = page
@@ -27,16 +23,12 @@ class Loading:
             horizontal_alignment="center"
         )
     
-    
-    
     async def start_loading(self):
         self.page.add(self.container)
         await asyncio.sleep(5)
         self.page.clean()
         self.page.update()
         Login(self.page).run()
-    
-    
    
     def run(self):
         asyncio.run(self.start_loading())
@@ -45,6 +37,5 @@ class Loading:
 def main(page: Page):
     app = Loading(page)
     app.run()
-
 
 app(target=main)
